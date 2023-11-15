@@ -1,0 +1,37 @@
+$body-bg: #ecf1f8;
+$bg: #ffffff;
+$accent: #f05d63;
+$accent-darker: #ed5267;
+$shadow: #000000;
+$default: #3e3f58;
+$gradient-1: #ff974f;
+$gradient-2: #e32c75;
+$default-light: #3e4056;
+$title: #636363;
+
+// B2B3BB author-color
+
+%open-s-400 {
+  font-family: 'OpenSans-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%open-s-600 {
+  font-family: 'OpenSans-SemiBold', sans-serif;
+  font-weight: 600;
+}
+
+%open-s-700 {
+  font-family: 'OpenSans-SemiBold', sans-serif;
+  font-weight: 700;
+}
+
+%monts-400 {
+  font-family: 'Montserrat-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%monts-600 {
+  font-family: 'Montserrat-SemiBold', sans-serif;
+  font-weight: 600;
+}

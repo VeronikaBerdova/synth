@@ -1,0 +1,61 @@
+@import 'reset';
+@import 'fonts';
+@import 'vars';
+@import 'mixins';
+@import 'global';
+
+.header {
+  background-color: $bg;
+  box-shadow: 0 12px 12px 0 rgba($shadow, 0.06);
+  &__inner {
+    padding: 21px 0 17px;
+    display: flex;
+    align-items: center;
+  }
+  &__user-nav {
+    margin: 0 17px 0 auto;
+  }
+  &__user-bar {
+    transform: translateY(3px);
+  }
+}
+
+.main-content {
+  &__inner {
+    position: relative;
+    display: flex;
+    @include mq('tablet') {
+      flex-direction: column;
+    }
+  }
+
+  &__user-card {
+    margin-right: 40px;
+    @include mq('tablet-2') {
+      margin-right: 0;
+    }
+  }
+
+  &__news-card {
+    margin-left: auto;
+    @include mq('desktop') {
+      margin: 0 auto;
+    }
+    @include mq('tablet') {
+      margin: 0;
+    }
+  }
+
+  &__box-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    @include mq('tablet-2') {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__switcher-menu {
+    margin-bottom: 60px;
+  }
+}

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a class="logo" href="#">
+          <img class="header__logo" src="images/logo.svg" style="width: 50px; height: 23px;" alt="logo synth">
+        </a>
+        <div class="header__user-nav user-nav">
+          <a class="user-nav__link" href="#">
+            <div class="user-nav__text">Arthur Wood</div>
+            <img class="user-nav__avatar" src="images/users/user-1.jpg" style="width: 32px; height: 32px;"
+              alt="user avatar Arthur Wood">
+          </a>
+
+          <button class="user-nav__arrow" type="button">
+            <svg>
+              <use xlink:href="images/sprite.svg#arrow-dawn-icon"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="header__user-bar user-bar">
+          <ul class="user-bar__list">
+            <li class="user-bar__item">
+              <a class="user-bar__link" href="#">
+                <svg>
+                  <use xlink:href="images/sprite.svg#bell-icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="user-bar__item">
+              <a class="user-bar__link" href="#">
+                <svg>
+                  <use xlink:href="images/sprite.svg#gift-icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="user-bar__item">
+              <a class="user-bar__link" href="#">
+                <svg>
+                  <use xlink:href="images/sprite.svg#m-icon"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="header__top-tab top-tab">
+        <ul class="top-tab__list">
+          <li class="top-tab__item">
+            <a class="top-tab__link top-tab__link--active" href="#">
+              Feed
+            </a>
+          </li>
+          <li class="top-tab__item">
+            <a class="top-tab__link" href="#">
+              Explore
+            </a>
+          </li>
+          <li class="top-tab__item">
+            <a class="top-tab__link" href="#">
+              Discussions
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+  </header>
+  <main class="main">
+    <section class="main-content">
+      <div class="container">
+        <div class="main-content__inner">
+          <div class="main-content__user-card">
+            <article class="user-card">
+              <div class="user-card__inner">
+                <img class="user-card__avatar" src="images/avatar.jpg" style="width: 120px; height: 120px;"
+                  alt="user avatar Benjamin Clementine">
+                <div class="user-card__settings">
+                  <span class="user-card__name">Benjamin Clementine</span>
+                  <a class="user-card__username" href="#">@benclementine</a>
+                  <button class="user-card__edit" type="button">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#edit-icon"></use>
+                    </svg>
+
+                    Edit Profile
+                  </button>
+                </div>
+                <div class="user-card__btn-box">
+                  <button class="user-card__btn-dots" type="button">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#dots-menu-icon"></use>
+                    </svg>
+                  </button>
+
+                  <ul class="user-card__btn-list" id="popup">
+                    <li class="user-card__btn-item">
+                      <button class="user-card__btn">
+                        <svg>
+                          <use xlink:href="images/sprite.svg#report-icon"></use>
+                        </svg>
+                        Report User
+                      </button>
+                    </li>
+                    <li class="user-card__btn-item">
+                      <button class="user-card__btn">
+                        <svg>
+                          <use xlink:href="images/sprite.svg#block-icon"></use>
+                        </svg>
+                        Block User
+                      </button>
+                    </li>
+                  </ul>
+
+                </div>
+
+              </div>
+              <div class="user-card__description">
+                <ul class="user-card__stats">
+                  <li class="user-card__stats-item">
+                    <a class="user-card__stats-link" href="#">
+                      <span class="user-card__synths">45</span>
+                      synths
+                    </a>
+                  </li>
+                  <li class="user-card__stats-item">
+                    <a class="user-card__stats-link" href="#">
+                      <span class="user-card__followers">110</span>
+                      followers
+                    </a>
+                  </li>
+                  <li class="user-card__stats-item">
+                    <a class="user-card__stats-link" href="#">
+                      <span class="user-card__following">322</span>
+                      following
+                    </a>
+                  </li>
+                </ul>
+                <div class="user-card__text">
+                  <p>
+                    Cryptocurrencies including Ethereum, Ripple, and Litecoin have all plunged between 20 to 30 percent
+                    each, according to
+                    CoinMarketCap. Here is the latest Ripple price news and live updates on XRP, bitcoin and Ethereum.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="main-content__news-card">
+            <div class="main-content__switcher-menu switcher-menu">
+              <span class="switcher-menu__item switcher-menu__item--public">Public</span>
+              <button class="switcher-menu__toggle" id="toggle" type="button">
+                <span class="toggled"></span>
+              </button>
+              <span class="switcher-menu__item switcher-menu__item--private">Private</span>
+            </div>
+            <div class="main-content__box">
+              <button class="add-new-card" type="button">
+                <span class="add-new-card__line"></span>
+              </button>
+              <ul class="main-content__box-list">
+                <li class="main-content__box--item">
+                  <article class="news-card">
+                    <div class="news-card__text">New air routes that promise cheap flights in</div>
+                    <div class="news-card__tags-bottom">
+                      <a class="news-card__author-wrap" href="#">
+                        <span class="news-card__author-color"></span>
+                        <span class="news-card__author">Gregory Watkins</span>
+                      </a>
+                      <a class="news-card__share" href="#">Share</a>
+                    </div>
+                  </article>
+                </li>
+                <li class="main-content__box--item">
+                  <article class="news-card">
+                    <div class="news-card__text">New air routes that promise cheap flights in</div>
+                    <div class="news-card__tags-bottom">
+                      <a class="news-card__author-wrap" href="#">
+                        <span class="news-card__author-color"></span>
+                        <span class="news-card__author">Gregory Watkins</span>
+                      </a>
+                      <a class="news-card__share" href="#">Share</a>
+                    </div>
+                  </article>
+                </li>
+                <li class="main-content__box--item">
+                  <article class="news-card">
+                    <div class="news-card__share-tag">
+                      <span>Shared to</span>
+                      <a href="#">#discussionaboutanimgttddonaboutanimgttdd</a>
+                    </div>
+                    <div class="news-card__text">New air routes that promise cheap flights in</div>
+                    <div class="news-card__tags-bottom">
+                      <a class="news-card__author-wrap" href="#">
+                        <span class="news-card__author-color"></span>
+                        <span class="news-card__author">Gregory Watkins</span>
+                      </a>
+                      <ul class="news-card__stats">
+                        <li class="news-card__stats-item">
+                          <button class="news-card__stats-btn news-card__stats-btn--view" type="button">
+                            <svg>
+                              <use xlink:href="images/sprite.svg#view-icon"></use>
+                            </svg>
+                            <span>88</span>
+                          </button>
+                        </li>
+                        <li class="news-card__stats-item">
+                          <button class="news-card__stats-btn news-card__stats-btn--like" type="button">
+                            <svg>
+                              <use xlink:href="images/sprite.svg#like-icon"></use>
+                            </svg>
+                            <span>24</span>
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </article>
+                </li>
+                <li class="main-content__box--item">
+                  <article class="news-card">
+                    <a class="news-card__share-link" href="#">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="a/icon_link copy">
+                          <g id="Group">
+                            <path id="Combined Shape" fill-rule="evenodd" clip-rule="evenodd"
+                              d="M8.58815 4.34081C10.5395 2.38948 13.7082 2.3945 15.6569 4.34315C17.6095 6.29577 17.6074 9.46372 15.6592 11.4119L11.4119 15.6592C9.46056 17.6105 6.29181 17.6055 4.34316 15.6569C2.39054 13.7042 2.39267 10.5363 4.34082 8.58814L8.58815 4.34081ZM10.002 5.75535L5.75536 10.002C4.58473 11.1727 4.5858 13.0711 5.75738 14.2426C6.92657 15.4118 8.82754 15.4151 9.998 14.2447L14.2447 9.99799C15.4153 8.82736 15.4142 6.92894 14.2427 5.75736C13.0735 4.58818 11.1725 4.58489 10.002 5.75535ZM7.8787 5.05026L5.05027 7.87868L6.46448 9.2929L9.29291 6.46447L7.8787 5.05026ZM13.5356 10.7071L10.7071 13.5355L12.1213 14.9498L14.9498 12.1213L13.5356 10.7071ZM10.7136 7.87216C11.1006 7.48524 11.7281 7.48544 12.1213 7.87868C12.5119 8.26921 12.5096 8.90468 12.1279 9.28638L9.28639 12.1278C8.89947 12.5148 8.27194 12.5146 7.8787 12.1213C7.48817 11.7308 7.49048 11.0953 7.87218 10.7136L10.7136 7.87216Z"
+                              fill="#3E4056" />
+                            <mask id="mask0_0_160" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2" y="2"
+                              width="16" height="16">
+                              <path id="Combined Shape_2" fill-rule="evenodd" clip-rule="evenodd"
+                                d="M8.58815 4.34081C10.5395 2.38948 13.7082 2.3945 15.6569 4.34315C17.6095 6.29577 17.6074 9.46372 15.6592 11.4119L11.4119 15.6592C9.46056 17.6105 6.29181 17.6055 4.34316 15.6569C2.39054 13.7042 2.39267 10.5363 4.34082 8.58814L8.58815 4.34081ZM10.002 5.75535L5.75536 10.002C4.58473 11.1727 4.5858 13.0711 5.75738 14.2426C6.92657 15.4118 8.82754 15.4151 9.998 14.2447L14.2447 9.99799C15.4153 8.82736 15.4142 6.92894 14.2427 5.75736C13.0735 4.58818 11.1725 4.58489 10.002 5.75535ZM7.8787 5.05026L5.05027 7.87868L6.46448 9.2929L9.29291 6.46447L7.8787 5.05026ZM13.5356 10.7071L10.7071 13.5355L12.1213 14.9498L14.9498 12.1213L13.5356 10.7071ZM10.7136 7.87216C11.1006 7.48524 11.7281 7.48544 12.1213 7.87868C12.5119 8.26921 12.5096 8.90468 12.1279 9.28638L9.28639 12.1278C8.89947 12.5148 8.27194 12.5146 7.8787 12.1213C7.48817 11.7308 7.49048 11.0953 7.87218 10.7136L10.7136 7.87216Z"
+                                fill="white" />
+                            </mask>
+                            <g mask="url(#mask0_0_160)">
+                              <g id="_/color_red copy">
+                                <rect id="Color" x="2" y="2" width="16" height="16" fill="#3E4056" />
+                              </g>
+                            </g>
+                          </g>
+                          <path id="Combined Shape_3" fill-rule="evenodd" clip-rule="evenodd"
+                            d="M5.05028 7.87867C5.44081 7.48815 6.07125 7.48543 6.4645 7.87867C6.85502 8.2692 6.85774 8.89964 6.4645 9.29289C6.07397 9.68341 5.44353 9.68613 5.05028 9.29289C4.65976 8.90236 4.65703 8.27192 5.05028 7.87867ZM10.7071 13.5355C11.0977 13.145 11.7281 13.1423 12.1213 13.5355C12.5119 13.9261 12.5146 14.5565 12.1213 14.9497C11.7308 15.3403 11.1004 15.343 10.7071 14.9497C10.3166 14.5592 10.3139 13.9288 10.7071 13.5355ZM13.5356 10.7071C13.9261 10.3166 14.5565 10.3139 14.9498 10.7071C15.3403 11.0976 15.343 11.7281 14.9498 12.1213C14.5593 12.5118 13.9288 12.5146 13.5356 12.1213C13.145 11.7308 13.1423 11.1003 13.5356 10.7071ZM7.87871 5.05025C8.26923 4.65972 8.89968 4.657 9.29292 5.05025C9.68345 5.44077 9.68617 6.07121 9.29292 6.46446C8.9024 6.85498 8.27196 6.85771 7.87871 6.46446C7.48818 6.07394 7.48546 5.44349 7.87871 5.05025Z"
+                            fill="#3E4056" />
+                          <mask id="mask1_0_160" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="4" y="4"
+                            width="12" height="12">
+                            <path id="Combined Shape_4" fill-rule="evenodd" clip-rule="evenodd"
+                              d="M5.05028 7.87867C5.44081 7.48815 6.07125 7.48543 6.4645 7.87867C6.85502 8.2692 6.85774 8.89964 6.4645 9.29289C6.07397 9.68341 5.44353 9.68613 5.05028 9.29289C4.65976 8.90236 4.65703 8.27192 5.05028 7.87867ZM10.7071 13.5355C11.0977 13.145 11.7281 13.1423 12.1213 13.5355C12.5119 13.9261 12.5146 14.5565 12.1213 14.9497C11.7308 15.3403 11.1004 15.343 10.7071 14.9497C10.3166 14.5592 10.3139 13.9288 10.7071 13.5355ZM13.5356 10.7071C13.9261 10.3166 14.5565 10.3139 14.9498 10.7071C15.3403 11.0976 15.343 11.7281 14.9498 12.1213C14.5593 12.5118 13.9288 12.5146 13.5356 12.1213C13.145 11.7308 13.1423 11.1003 13.5356 10.7071ZM7.87871 5.05025C8.26923 4.65972 8.89968 4.657 9.29292 5.05025C9.68345 5.44077 9.68617 6.07121 9.29292 6.46446C8.9024 6.85498 8.27196 6.85771 7.87871 6.46446C7.48818 6.07394 7.48546 5.44349 7.87871 5.05025Z"
+                              fill="white" />
+                          </mask>
+                          <g mask="url(#mask1_0_160)">
+                            <g id="_/color_red copy_2">
+                              <rect id="Color_2" x="2" y="2" width="16" height="16" fill="#3E4056" />
+                            </g>
+                          </g>
+                        </g>
+                      </svg>
+                      <span>Shared via weblink</span>
+                    </a>
+                    <div class="news-card__text">New air routes that promise cheap flights in</div>
+                    <div class="news-card__tags-bottom">
+                      <a class="news-card__author-wrap" href="#">
+                        <span class="news-card__author-color"></span>
+                        <span class="news-card__author">Gregory Watkins</span>
+                      </a>
+                      <ul class="news-card__stats">
+                        <li class="news-card__stats-item">
+                          <button class="news-card__stats-btn" type="button">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <g id="a/icon_view">
+                                <rect id="Mask Copy 6" opacity="0.01" width="16" height="16" fill="#ECF1F8" />
+                                <path id="Path" fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M15 8C14.9929 8.70812 14.6514 9.37509 14.0711 9.81411L7.96 14.4957C7.22814 15.0496 6.23091 15.1563 5.38942 14.7708C4.54794 14.3853 4.00892 13.5748 4 12.6816V3.31842C4.00892 2.4252 4.54794 1.61471 5.38942 1.22921C6.23091 0.843723 7.22814 0.950443 7.96 1.50431L14.0711 6.18589C14.6514 6.62491 14.9929 7.29188 15 8Z"
+                                  fill="#3E4056" />
+                                <mask id="mask0_0_263" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="4"
+                                  y="1" width="11" height="14">
+                                  <path id="Path_2" fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M15 8C14.9929 8.70812 14.6514 9.37509 14.0711 9.81411L7.96 14.4957C7.22814 15.0496 6.23091 15.1563 5.38942 14.7708C4.54794 14.3853 4.00892 13.5748 4 12.6816V3.31842C4.00892 2.4252 4.54794 1.61471 5.38942 1.22921C6.23091 0.843723 7.22814 0.950443 7.96 1.50431L14.0711 6.18589C14.6514 6.62491 14.9929 7.29188 15 8Z"
+                                    fill="white" />
+                                </mask>
+                                <g mask="url(#mask0_0_263)">
+                                  <g>
+                                    <rect id="Color" width="16" height="16" fill="#3E4056" />
+                                  </g>
+                                </g>
+                              </g>
+                            </svg>
+                            <span>88</span>
+                          </button>
+                        </li>
+                        <li class="news-card__stats-item"><button class="news-card__stats-btn" type="button">
+                            <svg width="16" height="14" viewBox="0 0 16 14" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M8 8.09328C7.17963 9.25452 5.90782 10 4.48 10C2.00576 10 0 7.76142 0 5C0 2.23858 2.00576 0 4.48 0C5.90782 0 7.17963 0.74548 8 1.90672C8.82038 0.74548 10.0922 0 11.52 0C13.9942 0 16 2.23858 16 5C16 7.76142 13.9942 10 11.52 10C10.0922 10 8.82038 9.25452 8 8.09328Z"
+                                fill="#FB5F8A" />
+                              <mask id="mask0_0_245" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0"
+                                width="16" height="10">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M8 8.09328C7.17963 9.25452 5.90782 10 4.48 10C2.00576 10 0 7.76142 0 5C0 2.23858 2.00576 0 4.48 0C5.90782 0 7.17963 0.74548 8 1.90672C8.82038 0.74548 10.0922 0 11.52 0C13.9942 0 16 2.23858 16 5C16 7.76142 13.9942 10 11.52 10C10.0922 10 8.82038 9.25452 8 8.09328Z"
+                                  fill="white" />
+                              </mask>
+                              <g mask="url(#mask0_0_245)">
+                                <rect width="16" height="16" fill="#FC719F" />
+                                <rect width="16" height="16" fill="#ED5267" />
+                              </g>
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M8 14C10.7614 14 16 9 16 5C16 5 0 5 0 5C0 9 5.23858 14 8 14Z" fill="#FB5F8A" />
+                              <mask id="mask1_0_245" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="5"
+                                width="16" height="9">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M8 14C10.7614 14 16 9 16 5C16 5 0 5 0 5C0 9 5.23858 14 8 14Z" fill="white" />
+                              </mask>
+                              <g mask="url(#mask1_0_245)">
+                                <rect width="16" height="16" fill="#FC719F" />
+                                <rect width="16" height="16" fill="#ED5267" />
+                              </g>
+                            </svg>
+                            <span>24</span>
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </article>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

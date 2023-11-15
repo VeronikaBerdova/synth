@@ -1,0 +1,577 @@
+body {
+  background-color: rgba($body-bg, 0.4);
+  @extend %open-s-400;
+  font-style: normal;
+  color: $default;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.main {
+  padding: 70px 0 340px;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1200px;
+}
+
+.logo {
+  transition: opacity 0.3s;
+
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.user-nav {
+  display: flex;
+  align-items: center;
+
+  &__link {
+    display: flex;
+    align-items: center;
+  }
+
+  &__text {
+    margin-right: 20px;
+    line-height: 1.25;
+    letter-spacing: -0.5px;
+    transition: color 0.3s;
+  }
+
+  &__avatar {
+    margin-right: 12px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+
+  &__arrow {
+    svg {
+      width: 16px;
+      height: 16px;
+      transform: translateY(3px) rotate(0);
+      transition: rotate 0.3s;
+    }
+
+    &:focus {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.user-bar {
+  &__list {
+    display: flex;
+    transform: translateY(-2px);
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  &__link {
+    line-height: 20px;
+    vertical-align: middle;
+    svg {
+      fill: $default;
+      width: 20px;
+      height: 20px;
+    }
+
+    &:focus {
+      svg {
+        fill: rgba($accent, 0.9);
+      }
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      svg {
+        fill: rgba($accent, 0.9);
+      }
+    }
+  }
+}
+
+.top-tab {
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 37px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    padding-bottom: 23px;
+    color: rgba($default-light, 0.6);
+    @extend %open-s-600;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 1;
+    text-transform: uppercase;
+    transition: color 0.3s;
+    &:after {
+      @include pseudo;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background-color: transparent;
+    }
+
+    &:focus {
+      color: rgba($accent, 0.9);
+    }
+
+    &:hover {
+      color: rgba($default-light, 1);
+    }
+
+    &:active {
+      color: $accent-darker;
+    }
+
+    &.top-tab__link--active {
+      color: rgba($default-light, 1);
+      &:after {
+        background: linear-gradient(135deg, $gradient-1 0%, $gradient-2 100%);
+      }
+    }
+  }
+}
+
+.switcher-menu {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    color: $default-light;
+    @extend %open-s-600;
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  &__toggle {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 20px;
+    width: 40px;
+    height: 24px;
+    padding: 3px;
+    background-color: $accent-darker;
+    margin: 0 30px;
+    span {
+      position: absolute;
+      top: 3px;
+      right: 3px;
+      display: inline-block;
+      border-radius: 50%;
+      width: 18px;
+      height: 18px;
+      background-color: $bg;
+      transition: right 0.4s ease;
+    }
+    &.toggled {
+      span {
+        right: calc(50% - 3px);
+      }
+    }
+  }
+}
+
+.user-card {
+  max-width: 350px;
+  width: 100%;
+  background-color: transparent;
+  @include mq('tablet') {
+    margin-bottom: 30px;
+    max-width: 100%;
+  }
+
+  &__inner {
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    @include mq('tablet') {
+      justify-content: flex-start;
+    }
+  }
+
+  &__avatar {
+    margin-right: 24px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+  }
+
+  &__settings {
+    margin-right: 25px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name {
+    margin-bottom: 8px;
+    @extend %monts-600;
+    font-size: 24px;
+    font-style: normal;
+    line-height: 1.1;
+  }
+
+  &__username {
+    margin-bottom: 16px;
+    line-height: 1.25;
+    letter-spacing: -0.5px;
+    transition: color 0.3s, opacity 0.3s;
+
+    &:focus {
+      color: rgba($accent-darker, 0.8);
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      color: $accent;
+    }
+  }
+
+  &__edit {
+    display: flex;
+    align-items: center;
+    color: $accent;
+    line-height: 1.25;
+    text-decoration-line: underline;
+    transition: color 0.3s;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+      transition: fill 0.3s, stroke 0.3s;
+    }
+
+    &:focus {
+      color: rgba($default, 0.8);
+      svg {
+        stroke: rgba($default, 0.8);
+        fill: rgba($default, 0.8);
+      }
+    }
+
+    &:hover {
+      opacity: 0.8;
+      svg {
+        opacity: 0.8;
+      }
+    }
+
+    &:active {
+      color: rgba($default-light, 0.8);
+      svg {
+        fill: rgba($default, 0.8);
+        stroke: rgba($default-light, 0.8);
+      }
+    }
+  }
+
+  &__btn-dots {
+    margin-top: 4px;
+    width: 44px;
+    height: 44px;
+
+    @include mq('tablet') {
+      margin-top: 0;
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &__btn-list {
+    border-radius: 8px;
+    box-shadow: 0 24px 24px 0 rgba($shadow, 0.12);
+    display: none;
+    position: absolute;
+    padding: 33px 0;
+    width: 176px;
+    border-radius: 8px;
+    background-color: rgba($bg, 0.94);
+    backdrop-filter: blur(10.873126983642578px);
+    &.user-card__btn-list--visible {
+      display: block;
+    }
+  }
+
+  &__btn-item {
+    width: 100%;
+  }
+
+  &__btn {
+    width: 100%;
+    padding: 8px 10px 8px 25px;
+    display: flex;
+    align-items: center;
+    color: $default-light;
+    @extend %open-s-600;
+    line-height: 1.5;
+    transition: background-color 0.3s;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      margin-right: 16px;
+      transition: fill 0.3s;
+    }
+
+    &:focus {
+      background-color: rgba($accent, 0.9);
+
+      // svg {
+      //   stroke: $bg;
+      // }
+    }
+
+    &:hover {
+      background-color: rgba($body-bg, 0.6);
+      backdrop-filter: blur(27.182817459106445px);
+    }
+
+    &:active {
+      background-color: $accent-darker;
+    }
+  }
+
+  &__stats {
+    margin-bottom: 23px;
+    display: flex;
+  }
+
+  &__stats-item {
+    text-align: center;
+    &:not(:last-child) {
+      margin-right: 48px;
+    }
+  }
+
+  &__stats-link {
+    color: $title;
+
+    span {
+      display: block;
+      color: $default;
+      @extend %open-s-700;
+      font-size: 18px;
+      line-height: 1.3;
+    }
+  }
+}
+
+.add-new-card {
+  position: absolute;
+  transform: translateY(-50%);
+  right: 0;
+  top: -70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, $gradient-1 0%, $gradient-2 100%);
+  transition: linear-gradient 0.5s;
+
+  &__line {
+    position: relative;
+    top: -1px;
+    display: inline-block;
+    width: 2px;
+    height: 20px;
+    background-color: $bg;
+
+    &:after {
+      @include pseudo;
+      top: 0;
+      left: 0;
+      width: 2px;
+      height: 20px;
+      background-color: $bg;
+      transform: rotate(90deg);
+    }
+  }
+
+  &:hover {
+    background: linear-gradient(35deg, $gradient-1 0%, $gradient-2 100%);
+  }
+}
+
+.news-card {
+  border-radius: 14px;
+  box-shadow: 0 24px 24px 0 rgba($shadow, 0.12);
+  padding: 24px;
+  max-width: 374px;
+  width: 100%;
+  height: 280px;
+  border-radius: 8px;
+  background-color: rgba($bg, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  @include mq('desktop') {
+    max-width: 314px;
+    height: 220px;
+  }
+  @include mq('tablet') {
+    max-width: 100%;
+  }
+
+  &__share-tag {
+    margin-bottom: auto;
+    display: flex;
+    align-items: center;
+
+    span {
+      min-width: 75px;
+      margin-bottom: 4px;
+      color: $default-light;
+      @extend %open-s-600;
+      line-height: 1;
+    }
+
+    a {
+      padding: 3px 5px 5px 4px;
+      border-radius: 6px;
+      background: $body-bg;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      @include mq('phone') {
+        max-width: 180px;
+      }
+    }
+  }
+
+  &__share-link {
+    // margin-bottom: 10px;
+    margin-bottom: auto;
+    display: flex;
+    align-items: center;
+    span {
+      margin-left: 4px;
+      color: $default-light;
+      @extend %open-s-600;
+      line-height: 1;
+    }
+  }
+
+  &__text {
+    margin-bottom: 44px;
+    color: $default-light;
+    @extend %monts-400;
+    font-size: 36px;
+    line-height: 1.2;
+    @include line-clamp(3);
+    @include mq('desktop') {
+      margin-bottom: 25px;
+      font-size: 24px;
+    }
+  }
+
+  &__tags-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__author-wrap {
+    display: flex;
+    align-items: center;
+  }
+
+  &__author-color {
+    margin-right: 8px;
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #b2b3bb;
+  }
+
+  &__author {
+    color: $default-light;
+    @extend %open-s-600;
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  &__share {
+    color: $accent;
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  &__stats {
+    display: flex;
+    align-items: center;
+  }
+
+  &__stats-item {
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+
+  &__stats-btn {
+    display: flex;
+    align-items: center;
+
+    &--view {
+      fill: $default-light;
+    }
+
+    &--like {
+      fill: $accent-darker;
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    span {
+      margin-left: 8px;
+      color: $default-light;
+      @extend %open-s-600;
+      font-size: 14px;
+      line-height: 1;
+    }
+  }
+}
